@@ -1,4 +1,4 @@
-package com.example.tp1smb116;
+package cnam.smb116.tp1;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.tp1smb116.R;
 
 public class MainActivity extends AppCompatActivity {
 

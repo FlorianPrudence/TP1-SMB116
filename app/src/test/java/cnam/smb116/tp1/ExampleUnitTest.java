@@ -1,4 +1,4 @@
-package com.example.tp1smb116;
+package cnam.smb116.tp1;
 
 import org.junit.Test;
 
