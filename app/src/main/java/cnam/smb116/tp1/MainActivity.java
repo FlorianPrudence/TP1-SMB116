@@ -14,13 +14,14 @@ import com.example.tp1smb116.R;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
-    int started;
+    static int started;
+    //int started;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        started = getIntent().getIntExtra("started", 0);
+        //started = getIntent().getIntExtra("started", 0);
         textView = (TextView)findViewById(R.id.textView1);
         textView.append("\n onCreate " + started);
     }
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         Intent intent = new Intent(MainActivity.this,MainActivity.class);  // création d'une autre activité avec le même code
-                        intent.putExtra("started", started + 1);
+                        //intent.putExtra("started", started + 1);
+                        started++;
                         startActivity(intent);
                     }
                 });
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void actionFinish(View view) {
+        started--;
         finish();
     }
 
